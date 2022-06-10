@@ -62,12 +62,12 @@ public class MainActivity extends AppCompatActivity {
 
                             if(task.isSuccessful()){
 
-                                Toast.makeText(MainActivity.this, "Log In Successful", Toast.LENGTH_LONG).show();
+                                Toast.makeText(MainActivity.this, "Log In Successful", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(getApplicationContext(), Dashboard.class);
                                 startActivity(intent);
 
                             }else{
-                                Toast.makeText(MainActivity.this, "Email or Password is incorrect", Toast.LENGTH_LONG).show();
+                                Toast.makeText(MainActivity.this, "Email or Password is incorrect", Toast.LENGTH_SHORT).show();
                             }
 
                         }

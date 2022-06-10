@@ -16,6 +16,18 @@
         android:theme="@style/Theme.AdminLIGTASystem"
         tools:targetApi="31">
         <activity
+            android:name=".Add_Announcements"
+            android:exported="false" />
+        <activity
+            android:name=".Announcements"
+            android:exported="false" />
+        <activity
+            android:name=".Inbox"
+            android:exported="false" />
+        <activity
+            android:name=".Users"
+            android:exported="false" />
+        <activity
             android:name=".Dashboard"
             android:exported="false" />
         <activity

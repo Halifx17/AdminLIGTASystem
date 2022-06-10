@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">LIGTASystem</string>
+    <string name="LogIn">Log In</string>
+    <string name="Password">Password</string>
+    <string name="Username">Username</string>
+    <string name="Username2">(Username)</string>
+    <string name="SignIn">Sign In</string>
+    <string name="NotYetReg">Not yet registered? Click here.</string>
+    <string name="EmailAddress">Email</string>
+    <string name="Register">Register</string>
+    <string name="FirstName">First Name</string>
+    <string name="MiddleName">Middle Name</string>
+    <string name="LastName">Last Name</string>
+    <string name="Address">Address</string>
+    <string name="PhoneNumber">Phone Number</string>
+    <string name="Hi">Hi\,\ </string>
+    <string name="Loading">Loading. . .</string>
+    <string name="Welcome">Welcome to Amamperez Healthcare Information App</string>
+    <string name="LetsGetStarted">Let\'s get Started</string>
+    <string name="ClickHere">Click here</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Home">Home</string>
+    <string name="Services">Services</string>
+    <string name="Profile">Profile</string>
+    <string name="About">About</string>
+    <string name="Or">OR</string>
+    <string name="emailSignUp">SIGN UP WITH EMAIL</string>
+    <string name="google">SIGN IN WITH GOOGLE</string>
+    <string name="BakunaCov">BAKUNA KONTRA COVID-19</string>
+    <string name="BakunaTig">BAKUNA KONTRA TIGDAS</string>
+    <string name="AntiRab">ANTI-RABIES</string>
+    <string name="AmamperezHistory">Brief History of the town of Amamperez Villasis, Pangasinan</string>
+    <string name="Vision">Vision</string>
+    <string name="Mission">Mission</string>
+    <string name="VisionText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales ex non ex aliquam fermentum.</string>
+    <string name="MissionText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales ex non ex aliquam fermentum.</string>
+    <string name="UserInfo">User Info</string>
+    <string name="Stats">Stats</string>
+    <string name="Please">Please fill out the remaining information to complete the registration</string>
+
+    <string name="default_web_client_id1" translatable="false">693832351431-5c71cl7m7e099uaubots49re3b9772bq.apps.googleusercontent.com</string>
+</resources>

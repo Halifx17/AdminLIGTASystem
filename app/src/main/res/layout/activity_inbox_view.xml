@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InboxView">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profile_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/ligtasystem_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/Circular">
+
+    </com.google.android.material.imageview.ShapeableImageView>
+
+    <TextView
+        android:id="@+id/inboxTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/antic"
+        android:text="TextView"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_icon" />
+
+    <TextView
+        android:id="@+id/inboxWhatText"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/candal"
+        android:gravity="center"
+        android:text="@string/Welcome"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="@+id/inboxTitleText"
+        app:layout_constraintStart_toStartOf="@+id/inboxTitleText"
+        app:layout_constraintTop_toBottomOf="@+id/inboxTitleText" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/approveBtn"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/shape_circle_1"
+        android:fontFamily="@font/antic"
+        android:text="Approve"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:errorTextColor="@color/red"
+        app:layout_constraintStart_toStartOf="@+id/inboxWhatText"
+        app:layout_constraintTop_toBottomOf="@+id/inboxWhatText" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/denyBtn"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/shape_circle_2"
+        android:fontFamily="@font/antic"
+        android:text="Deny"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:errorTextColor="@color/red"
+        app:layout_constraintEnd_toEndOf="@+id/inboxWhatText"
+        app:layout_constraintTop_toBottomOf="@+id/inboxWhatText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

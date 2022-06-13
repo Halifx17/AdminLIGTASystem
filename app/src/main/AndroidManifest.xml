@@ -16,6 +16,12 @@
         android:theme="@style/Theme.AdminLIGTASystem"
         tools:targetApi="31">
         <activity
+            android:name=".InboxView"
+            android:exported="false" />
+        <activity
+            android:name=".AnnouncementView"
+            android:exported="false" />
+        <activity
             android:name=".Add_Announcements"
             android:exported="false" />
         <activity

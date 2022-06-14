@@ -40,17 +40,14 @@ public class MyAdapterAnnounce extends RecyclerView.Adapter<MyAdapterAnnounce.My
 
         Announcement announcement = list.get(position);
         holder.title.setText(announcement.getTitle());
-        holder.when.setText(announcement.getWhen());
-        holder.by.setText(announcement.getBy());
+        holder.date.setText(announcement.getDate());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context,AnnouncementView.class);
                 intent.putExtra("titleExtra",announcement.getTitle());
-                intent.putExtra("whoExtra",announcement.getWho());
-                intent.putExtra("whatExtra",announcement.getWhat());
-                intent.putExtra("whenExtra",announcement.getWhen());
-                intent.putExtra("byExtra",announcement.getBy());
+                intent.putExtra("dateExtra",announcement.getDate());
+                intent.putExtra("aboutExtra",announcement.getAbout());
                 context.startActivity(intent);
             }
         });
@@ -64,15 +61,14 @@ public class MyAdapterAnnounce extends RecyclerView.Adapter<MyAdapterAnnounce.My
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView when, title, by;
+        TextView date, title;
         CardView cardView;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
             title = itemView.findViewById(R.id.titleTv);
-            when = itemView.findViewById(R.id.whenTv);
-            by = itemView.findViewById(R.id.byTv);
+            date = itemView.findViewById(R.id.dateTv);
             cardView = itemView.findViewById(R.id.announcementCard);
 
         }

@@ -14,8 +14,8 @@
         android:fontFamily="@font/antic"
         android:gravity="center"
         android:paddingTop="5dp"
-        android:text="ANNOUNCEMENTS"
-        android:textSize="35sp"
+        android:text="INBOX"
+        android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

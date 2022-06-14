@@ -9,31 +9,26 @@ import android.widget.Toast;
 
 public class AnnouncementView extends AppCompatActivity {
 
-    String who, what, when, by, title;
-    TextView whoText, whatText, byText, titleText, whenText;
+    String date, about, title;
+    TextView dateText, aboutText, titleText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_announcement_view);
 
-        whoText = findViewById(R.id.whoText);
-        whatText = findViewById(R.id.whatText);
-        whenText = findViewById(R.id.whenText);
-        byText = findViewById(R.id.byText);
+
+        aboutText = findViewById(R.id.aboutText);
+        dateText = findViewById(R.id.dateText);
         titleText = findViewById(R.id.titleText);
 
         Intent extraIntent = getIntent();
-        who = extraIntent.getStringExtra("whoExtra");
-        what = extraIntent.getStringExtra("whatExtra");
-        when = extraIntent.getStringExtra("whenExtra");
-        by = extraIntent.getStringExtra("byExtra");
+        date = extraIntent.getStringExtra("dateExtra");
+        about = extraIntent.getStringExtra("aboutExtra");
         title = extraIntent.getStringExtra("titleExtra");
 
-        whoText.setText(who);
-        whatText.setText(what);
-        whenText.setText(when);
-        byText.setText(by);
+        aboutText.setText(about);
+        dateText.setText(date);
         titleText.setText(title);
 
     }

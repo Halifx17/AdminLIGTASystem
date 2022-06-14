@@ -2,14 +2,12 @@ package com.example.adminligtasystem;
 
 public class Announcement {
 
-    String title, who, what, when, by;
+    String title, date, about;
 
-    public Announcement(String title, String who, String what, String when, String by) {
+    public Announcement(String title, String date, String about) {
         this.title = title;
-        this.who = who;
-        this.what = what;
-        this.when = when;
-        this.by = by;
+        this.date = date;
+        this.about = about;
     }
 
     public String getTitle() {
@@ -20,36 +18,20 @@ public class Announcement {
         this.title = title;
     }
 
-    public String getWho() {
-        return who;
+    public String getDate() {
+        return date;
     }
 
-    public void setWho(String who) {
-        this.who = who;
+    public void setDate(String date) {
+        this.date = date;
     }
 
-    public String getWhat() {
-        return what;
+    public String getAbout() {
+        return about;
     }
 
-    public void setWhat(String what) {
-        this.what = what;
-    }
-
-    public String getWhen() {
-        return when;
-    }
-
-    public void setWhen(String when) {
-        this.when = when;
-    }
-
-    public String getBy() {
-        return by;
-    }
-
-    public void setBy(String by) {
-        this.by = by;
+    public void setAbout(String about) {
+        this.about = about;
     }
 
     public Announcement(){

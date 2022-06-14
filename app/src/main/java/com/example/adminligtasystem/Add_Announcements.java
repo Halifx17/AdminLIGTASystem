@@ -30,8 +30,8 @@ import java.util.Calendar;
 public class Add_Announcements extends AppCompatActivity {
 
     DatePickerDialog datePickerDialog;
-    TextInputLayout editTextTitle, editTextWho, editTextWhen, editTextWhat, editTextBy;
-    EditText  editTitle, editWho, editWhen, editWhat, editBy;
+    TextInputLayout editTextTitle, editTextDate, editTextAbout;
+    EditText  editTitle, editDate, editAbout;
     FirebaseAuth mAuth;
     DatabaseReference referenceId;
     long maxId = 0;
@@ -44,16 +44,14 @@ public class Add_Announcements extends AppCompatActivity {
 
         initDatePicker();
         editTextTitle = findViewById(R.id.EditText_title);
-        editTextWho = findViewById(R.id.EditText_whoTxt);
-        editTextWhen = findViewById(R.id.EditText_whenTxt);
-        editTextWhat = findViewById(R.id.EditText_whatTxt);
-        editTextBy = findViewById(R.id.EditText_whatTxt);
+        editTextDate = findViewById(R.id.EditText_dateTxt);
+        editTextAbout = findViewById(R.id.EditText_aboutTxt);
+
 
         editTitle = findViewById(R.id.Edit_title);
-        editWho = findViewById(R.id.Edit_whoTxt);
-        editWhen = findViewById(R.id.Edit_whenTxt);
-        editWhat = findViewById(R.id.Edit_whatTxt);
-        editBy = findViewById(R.id.Edit_byTxt);
+        editDate = findViewById(R.id.Edit_dateTxt);
+        editAbout = findViewById(R.id.Edit_aboutTxt);
+
 
         referenceId = FirebaseDatabase.getInstance().getReference("Announcements");
 
@@ -82,7 +80,7 @@ public class Add_Announcements extends AppCompatActivity {
 
                 month = month + 1;
                 String date = makeDateString(day, month, year);
-                editWhen.setText(date);
+                editDate.setText(date);
 
             }
         };
@@ -142,67 +140,46 @@ public class Add_Announcements extends AppCompatActivity {
 
     public void announceFirebase(View view) {
 
-        String title, who, what, when, by;
+        String title, date, about;
 
         title = editTitle.getText().toString().trim();
-        who = editWho.getText().toString().trim();
-        what = editWhat.getText().toString().trim();
-        when = editWhen.getText().toString().trim();
-        by = editBy.getText().toString().trim();
+        date = editDate.getText().toString().trim();
+        about = editAbout.getText().toString().trim();
 
 
-        if (who.isEmpty() && who.isEmpty() && what.isEmpty() && when.isEmpty() && by.isEmpty()) {
+
+        if (title.isEmpty() && date.isEmpty() && about.isEmpty()) {
             Toast.makeText(Add_Announcements.this, "Fields are Required", Toast.LENGTH_LONG).show();
             editTextTitle.setError("Field is Required");
-            editTextWho.setError("Field is Required");
-            editTextWhat.setError("Field is Required");
-            editTextWhen.setError("Field is Required");
-            editTextBy.setError("Field is Required");
+            editTextDate.setError("Field is Required");
+            editTextAbout.setError("Field is Required");
 
         } else if (title.isEmpty()) {
             Toast.makeText(Add_Announcements.this, "Field is Required", Toast.LENGTH_LONG).show();
             editTextTitle.setError("Field is Required");
-            editTextWho.setError(null);
-            editTextWhat.setError(null);
-            editTextWhen.setError(null);
-            editTextBy.setError(null);
+            editTextDate.setError(null);
+            editTextAbout.setError(null);
 
-        } else if (who.isEmpty()) {
-            Toast.makeText(Add_Announcements.this, "Field is Required", Toast.LENGTH_LONG).show();
-            editTextTitle.setError(null);
-            editTextWho.setError("Field is Required");
-            editTextWhat.setError(null);
-            editTextWhen.setError(null);
-            editTextBy.setError(null);
 
-        } else if (what.isEmpty()) {
+        } else if (date.isEmpty()) {
             Toast.makeText(Add_Announcements.this, "Field is Required", Toast.LENGTH_LONG).show();
             editTextTitle.setError(null);
-            editTextWho.setError(null);
-            editTextWhat.setError("Field is Required");
-            editTextWhen.setError(null);
-            editTextBy.setError(null);
-        } else if (when.isEmpty()) {
+            editTextDate.setError("Field is Required");
+            editTextAbout.setError(null);
+
+        } else if (about.isEmpty()) {
             Toast.makeText(Add_Announcements.this, "Field is Required", Toast.LENGTH_LONG).show();
             editTextTitle.setError(null);
-            editTextWho.setError(null);
-            editTextWhat.setError(null);
-            editTextWhen.setError("Field is Required");
-            editTextBy.setError(null);
-        } else if (by.isEmpty()) {
-            Toast.makeText(Add_Announcements.this, "Field is Required", Toast.LENGTH_LONG).show();
-            editTextTitle.setError(null);
-            editTextWho.setError(null);
-            editTextWhat.setError(null);
-            editTextWhen.setError(null);
-            editTextBy.setError("Field is Required");
+            editTextDate.setError(null);
+            editTextAbout.setError("Field is Required");
+
         } else {
-                Announcement announcement = new Announcement(title,who,what,when,by);
+                Announcement announcement = new Announcement(title,date,about);
 
 
 
 
-            referenceId.child(String.valueOf(maxId+1)).setValue(announcement).addOnCompleteListener(new OnCompleteListener<Void>() {
+            referenceId.push().setValue(announcement).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
 
@@ -234,4 +211,4 @@ public class Add_Announcements extends AppCompatActivity {
 
         builder.show();
     }
-    }
+}

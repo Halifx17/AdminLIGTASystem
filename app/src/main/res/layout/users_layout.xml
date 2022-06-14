@@ -4,10 +4,11 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginBottom="2dp"
-    app:cardBackgroundColor="@color/white"
-    app:cardCornerRadius="3dp"
-    android:elevation="3dp"
+    app:cardBackgroundColor="@color/babyBlue"
+    app:cardCornerRadius="20dp"
     app:contentPadding="5dp"
+    android:elevation="5dp"
+    android:layout_margin="10dp"
     android:id="@+id/usersCard">
 
     <LinearLayout
@@ -18,8 +19,7 @@
         <RelativeLayout
             android:padding="5dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shape_rectangle">
+            android:layout_height="wrap_content">
 
             <TableLayout
                 android:layout_width="match_parent"

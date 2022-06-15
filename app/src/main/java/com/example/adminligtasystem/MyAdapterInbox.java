@@ -35,15 +35,24 @@ public class MyAdapterInbox extends RecyclerView.Adapter<MyAdapterInbox.MyViewHo
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         InboxClass inboxClass = list.get(position);
-        holder.title.setText(inboxClass.getTitle());
-        holder.user.setText(inboxClass.getUser());
+        holder.type.setText(inboxClass.getType());
+        holder.user.setText(inboxClass.getFirstname()+inboxClass.getLastname());
 
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context,InboxView.class);
-                intent.putExtra("titleExtra",inboxClass.getTitle());
-                intent.putExtra("whatExtra",inboxClass.getContent());
+                intent.putExtra("type",inboxClass.getType());
+                intent.putExtra("concern",inboxClass.getConcern());
+                intent.putExtra("username",inboxClass.getUsername());
+                intent.putExtra("firstname",inboxClass.getFirstname());
+                intent.putExtra("profileUri",inboxClass.getProfileUri());
+                intent.putExtra("lastname",inboxClass.getFirstname());
+                intent.putExtra("email",inboxClass.getEmail());
+                intent.putExtra("address",inboxClass.getAddress());
+                intent.putExtra("phoneNumber",inboxClass.getPhoneNumber());
+                intent.putExtra("password",inboxClass.getPassword());
+                intent.putExtra("birthDate",inboxClass.getBirthdate());
                 context.startActivity(intent);
             }
         });
@@ -57,13 +66,13 @@ public class MyAdapterInbox extends RecyclerView.Adapter<MyAdapterInbox.MyViewHo
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView title, content, user;
+        TextView type, user;
         CardView cardView;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            title = itemView.findViewById(R.id.inboxTitleTv);
+            type = itemView.findViewById(R.id.inboxTypeTv);
             user = itemView.findViewById(R.id.inboxUserTv);
             cardView = itemView.findViewById(R.id.inboxCard);
         }

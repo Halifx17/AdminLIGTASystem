@@ -8,7 +8,7 @@
     app:cardCornerRadius="20dp"
     app:contentPadding="5dp"
     android:elevation="5dp"
-    android:layout_margin="20dp"
+    android:layout_margin="10dp"
     android:onClick="viewInbox"
     android:id="@+id/inboxCard">
 
@@ -34,11 +34,11 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Title"
+                        android:text="Type"
                         android:textColor="@color/black"
                         android:textStyle="bold"/>
                     <TextView
-                        android:id="@+id/inboxTitleTv"
+                        android:id="@+id/inboxTypeTv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="-"
@@ -54,7 +54,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="By"
+                        android:text="User"
                         android:textColor="@color/black"
                         android:textStyle="bold"/>
                     <TextView

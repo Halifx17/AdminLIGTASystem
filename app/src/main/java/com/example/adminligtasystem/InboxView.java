@@ -8,8 +8,8 @@ import android.widget.TextView;
 
 public class InboxView extends AppCompatActivity {
 
-    String  what, title;
-    TextView whatText, titleText;
+    String  firstname, lastname, username, birthdate, email, address, phoneNumber, password, profileUri, type, concern;
+    TextView inboxTypeText, inboxConcernText, inboxNameTv, inboxEmailTv, inboxAddressTv, inboxContactTv, inboxBirthdateTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,14 +17,34 @@ public class InboxView extends AppCompatActivity {
         setContentView(R.layout.activity_inbox_view);
 
 
-        whatText = findViewById(R.id.inboxWhatText);
-        titleText = findViewById(R.id.inboxTitleText);
+        inboxTypeText = findViewById(R.id.inboxTypeText);
+        inboxConcernText = findViewById(R.id.inboxConcernText);
+        inboxNameTv = findViewById(R.id.inboxNameTv);
+        inboxEmailTv = findViewById(R.id.inboxEmailTv);
+        inboxAddressTv = findViewById(R.id.inboxAddressTv);
+        inboxContactTv = findViewById(R.id.inboxContactTv);
+        inboxBirthdateTv = findViewById(R.id.inboxBirthdateTv);
+
 
         Intent extraIntent = getIntent();
-        what = extraIntent.getStringExtra("whatExtra");
-        title = extraIntent.getStringExtra("titleExtra");
+        concern = extraIntent.getStringExtra("concern");
+        type = extraIntent.getStringExtra("type");
+        firstname = extraIntent.getStringExtra("firstname");
+        lastname = extraIntent.getStringExtra("lastname");
+        username = extraIntent.getStringExtra("username");
+        birthdate = extraIntent.getStringExtra("birthdate");
+        email = extraIntent.getStringExtra("email");
+        address = extraIntent.getStringExtra("address");
+        phoneNumber = extraIntent.getStringExtra("phoneNumber");
+        password = extraIntent.getStringExtra("password");
+        profileUri = extraIntent.getStringExtra("profileUri");
 
-        whatText.setText(what);
-        titleText.setText(title);
+        inboxTypeText.setText(type);
+        inboxConcernText.setText(concern);
+        inboxNameTv.setText(firstname+" "+lastname);
+        inboxEmailTv.setText(email);
+        inboxAddressTv.setText(address);
+        inboxContactTv.setText(phoneNumber);
+        inboxBirthdateTv.setText(birthdate);
     }
 }

@@ -35,11 +35,39 @@
         app:layout_constraintTop_toBottomOf="@+id/round_icon_start" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/EditText_Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="64dp"
+        android:hint="@string/EmailAddress"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:errorEnabled="true"
+        app:errorIconTint="@color/teal_700"
+        app:errorTextColor="@color/teal_700"
+        app:hintTextColor="@color/teal_700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LogIn_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/LogIn_Edit_Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_textfields"
+            android:fontFamily="@font/antic"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/EditText_Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="64dp"
         android:layout_marginEnd="64dp"
         android:hint="@string/Password"
         app:boxStrokeWidth="0dp"
@@ -51,7 +79,7 @@
         app:hintTextColor="@color/teal_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LogIn_text">
+        app:layout_constraintTop_toBottomOf="@+id/EditText_Email">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/LogIn_Edit_Password"

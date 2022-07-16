@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         logInButton = findViewById(R.id.LogInButton);
+        editEmail = findViewById(R.id.LogIn_Edit_Email);
+        editTextEmail = findViewById(R.id.EditText_Email);
         editPassword = findViewById(R.id.LogIn_Edit_Password);
         editTextPassword = (TextInputLayout) findViewById(R.id.EditText_Password);
         mAuth = FirebaseAuth.getInstance();
@@ -43,15 +45,28 @@ public class MainActivity extends AppCompatActivity {
     public void LogIn(View view) {
 
         String email, password;
-        email = "Fred@gmail.com";
+        email = editEmail.getText().toString().trim();
         password = editPassword.getText().toString().trim();
 
-        if(password.isEmpty()){
+        if(email.isEmpty()&&password.isEmpty()){
             Toast.makeText(MainActivity.this, "Fields cannot be Empty", Toast.LENGTH_SHORT).show();
+            editTextEmail.setError("Email is required");
             editTextPassword.setError("Password is required");
+        }
+        else if(email.isEmpty()){
+            Toast.makeText(MainActivity.this, "Email cannot be Empty", Toast.LENGTH_SHORT).show();
+            editTextEmail.setError("Password is required");
+            editTextPassword.setError(null);
+        }
+
+        else if(password.isEmpty()){
+            Toast.makeText(MainActivity.this, "Password cannot be Empty", Toast.LENGTH_SHORT).show();
+            editTextPassword.setError("Password is required");
+            editTextEmail.setError(null);
         }
 
         else{
+            editTextEmail.setError(null);
             editTextPassword.setError(null);
 
 

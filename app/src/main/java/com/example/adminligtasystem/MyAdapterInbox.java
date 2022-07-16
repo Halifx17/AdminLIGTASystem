@@ -52,7 +52,7 @@ public class MyAdapterInbox extends RecyclerView.Adapter<MyAdapterInbox.MyViewHo
                 intent.putExtra("address",inboxClass.getAddress());
                 intent.putExtra("phoneNumber",inboxClass.getPhoneNumber());
                 intent.putExtra("password",inboxClass.getPassword());
-                intent.putExtra("birthDate",inboxClass.getBirthdate());
+                intent.putExtra("birthdate",inboxClass.getBirthdate());
                 context.startActivity(intent);
             }
         });

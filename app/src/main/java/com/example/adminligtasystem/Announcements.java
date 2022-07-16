@@ -38,6 +38,10 @@ public class Announcements extends AppCompatActivity {
         dbReference = FirebaseDatabase.getInstance().getReference("Announcements");
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        LinearLayoutManager layoutManager = new LinearLayoutManager(Announcements.this);
+        layoutManager.setReverseLayout(true);
+        layoutManager.setStackFromEnd(true);
+        recyclerView.setLayoutManager(layoutManager);
 
         list = new ArrayList<>();
         myAdapterAnnounce = new MyAdapterAnnounce(this,list);

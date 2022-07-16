@@ -205,35 +205,6 @@
         app:layout_constraintTop_toBottomOf="@+id/inboxTypeText" />
 
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/approveBtn"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/shape_circle_1"
-        android:fontFamily="@font/antic"
-        android:text="Approve"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:errorTextColor="@color/red"
-        app:layout_constraintStart_toStartOf="@+id/inboxConcernText"
-        app:layout_constraintTop_toBottomOf="@+id/inboxConcernText" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/denyBtn"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/shape_circle_2"
-        android:fontFamily="@font/antic"
-        android:text="Deny"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:errorTextColor="@color/red"
-        app:layout_constraintEnd_toEndOf="@+id/inboxConcernText"
-        app:layout_constraintTop_toBottomOf="@+id/inboxConcernText" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
